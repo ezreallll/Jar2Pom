@@ -16,7 +16,6 @@ public class MakePomFromJars {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Element dependencys = new DOMElement("dependencys");
 //        File dir = new File("/Users/xxx/Documents/work/workspaces/maven_demo/src/resources/webapp/WEB-INF/lib");
-        File dir = new File("/Users/hongpeng/workspace/FHSHGL/WebRoot/WEB-INF/lib");
         for (File jar : dir.listFiles()) {
             JarInputStream jis = new JarInputStream(new FileInputStream(jar));
             Manifest mainmanifest = jis.getManifest();
